@@ -1,0 +1,15 @@
+<div class="card">
+  <img class="card-img-top" src="https://pbs.twimg.com/media/Clusm_JWYAEj2H-.jpg" alt="Michael Jackson">
+  <div class="card-block">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <% @photos.each do |photo| %>
+    <div class="card">
+      <div class="card-header"><%= photo.username %></div>
+      <%= image_tag photo.url, class: "card-img-top", alt: "photo" %>
+      <div class="card-block">
+        <p class="card-text"><%= photo.caption %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
